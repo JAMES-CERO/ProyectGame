@@ -1,0 +1,46 @@
+/*Each cell looks like an square & we wanted to center the piece
+*/
+
+td{
+    background-color: royalblue;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+}
+
+.noPieceHere{
+    background-color: black;
+}
+
+.black-piece{
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  background-color: rgb(62, 7, 62);
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.red-piece{
+  width: 20px;
+  height: 20px;
+  padding: 12px;
+  background-color: red;
+  border: 1px solid pink;
+  border-radius: 50px;
+}
+
+.king.red-piece{
+    background-color: green;
+}
+
+.king.black-piece{
+    background-color: lightseagreen;
+}
+
+.black-turn-text{
+    color: rgb(227, 189, 119);
+}
+.red-turn-text{
+    color: orange;
+}
