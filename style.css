@@ -2,34 +2,35 @@
 */
 
 td{
-    background-color: royalblue;
+    background-color:rgb(176, 113, 24);
     width: 80px;
     height: 80px;
     text-align: center;
 }
 
 .noPieceHere{
-    background-color: black;
+    background-color: rgba(246, 202, 141, 0.807);
 }
 
 .black-piece{
   width: 20px;
   height: 20px;
   padding: 12px;
-  background-color: rgb(62, 7, 62);
-  border: 1px solid red;
-  border-radius: 50%;
+  background-color: rgb(2, 2, 2);
+  border: 1px solid rgb(97, 4, 97);
+  border-radius: 50px;
 }
 
 .red-piece{
   width: 20px;
   height: 20px;
   padding: 12px;
-  background-color: red;
-  border: 1px solid pink;
+  background-color: rgb(243, 7, 7);
+  border: 1px solid rgb(255, 192, 203);
   border-radius: 50px;
 }
 
+/* A normal piece become King when reaching the last line on the opposite side of the board,  */
 .king.red-piece{
     background-color: green;
 }
@@ -38,9 +39,9 @@ td{
     background-color: lightseagreen;
 }
 
-.black-turn-text{
+.blackTurn{
     color: rgb(227, 189, 119);
 }
-.red-turn-text{
+.redTurn{
     color: orange;
 }
