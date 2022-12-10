@@ -38,10 +38,25 @@ td{
 .king.black-piece{
     background-color: lightseagreen;
 }
-
+/* Flexbox 
+  https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+  https://stackoverflow.com/questions/446060/css-two-divs-next-to-each-other*/
 .blackTurn{
-    color: rgb(227, 189, 119);
+    color: rgb(58, 27, 216);
+    flex: 1;
+    align-self: center;
+    
 }
 .redTurn{
     color: orange;
+    width: 338px;
+    align-self: center;
+    
+}
+
+nav{
+    display: flex;
+    background-color: rgb(214, 89, 89);
+    width: 675px;
+    
 }
