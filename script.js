@@ -20,3 +20,24 @@ const divider = document.querySelector("#divider")
 //TO DO: FUNCTION THAT VALIDATED LEGAL MOVES
   //REMOVE PIECE THAT IS ELIMINATED
   //MOVEMENT OF THE PIECES
+
+  let redPieceScore = 12;
+  let blackPieceScore = 12;
+
+  // Add an event listener to each piece, using a callback 
+  function piecesMovement(){
+    if (turn) {
+        for (let i = 0; i < redPieces.length; i++) {
+            redPieces[i].addEventListener('click',  getPieces())
+        }
+    } else {
+        for (let i = 0; i < blackPieces.length; i++) {
+            blackPieces[i].addEventListener('click', getPieces())
+            
+        }
+    }
+  }
+  //TO DO: a funtion that get the pieces count 
+  function getPiecescount(){
+   
+  }
