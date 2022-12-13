@@ -17,27 +17,45 @@ const redTurnText = document.querySelectorAll(".red-turn-text");
 const blackTurnText = document.querySelectorAll(".black-turn-text");
 const divider = document.querySelector("#divider")
 
-//TO DO: FUNCTION THAT VALIDATED LEGAL MOVES
+//TO DO: FUNCTION THAT VALIDATED LEGAL MOVES - 
   //REMOVE PIECE THAT IS ELIMINATED
-  //MOVEMENT OF THE PIECES
+  //MOVEMENT OF THE PIECES  -done
+
 
   let redPieceScore = 12;
   let blackPieceScore = 12;
+  const turn = true; //current player turn
 
-  // Add an event listener to each piece, using a callback 
+  let SelectedPiece = {
+    pieceId: -1, indexPiece: -1, isKing: false, seventhSpace: false, ninthSpace: false, fourteenthSpace: false, eightteenthSpace: false, negativeSevenhSpace: false, negativeNinthSpace: false,  negativefourteenthSpace: false, negativeEighteenthSpace: false 
+  }//with the board array I needed a var that hold the piece's properties & legal movements
+
+
+  // Add an event listener to each piece
   function piecesMovement(){
     if (turn) {
         for (let i = 0; i < redPieces.length; i++) {
-            redPieces[i].addEventListener('click',  getPieces())
+            redPieces[i].addEventListener('click',  getPiecescount)
         }
     } else {
         for (let i = 0; i < blackPieces.length; i++) {
-            blackPieces[i].addEventListener('click', getPieces())
-            
+            blackPieces[i].addEventListener('click', getPiecescount)
         }
     }
   }
-  //TO DO: a funtion that get the pieces count 
+  //This is a funtion that get the pieces count 
   function getPiecescount(){
-   
+    if (turn === true ) {
+        playerPieces = redPieces; // line 14
+    } else {
+        playerPieces = blackPieces;// line 15
+    }
+    removeOnClick();
+  }
+// function that removes Onclick on pieces, src https://forum.boardgamearena.com/viewtopic.php?t=17885&start=10
+// Element.removeAttribute() from https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute
+  function removeOnClick(){
+    for (let i = 0; i < tableaCells.length; i++) {
+        tableCells[i].removeAttribute("onclick");
+    }
   }
