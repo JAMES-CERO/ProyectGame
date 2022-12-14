@@ -13,8 +13,8 @@ const board = [
 const cells = document.querySelectorAll("td");
 let redPieces = document.querySelectorAll("p");
 let blackPieces = document.querySelectorAll("span")
-const redTurnText = document.querySelectorAll(".red-turn-text");
-const blackTurnText = document.querySelectorAll(".black-turn-text");
+const redTurnText = document.querySelectorAll(".redTurn");
+const blackTurnText = document.querySelectorAll(".blackTurn");
 const divider = document.querySelector("#divider")
 
 //TO DO: FUNCTION THAT VALIDATED LEGAL MOVES - 
@@ -32,7 +32,7 @@ const divider = document.querySelector("#divider")
 
 
   // Add an event listener to each piece
-  function piecesMovement(){
+  function piecesEvent(){
     if (turn) {
         for (let i = 0; i < redPieces.length; i++) {
             redPieces[i].addEventListener('click',  getPiecescount)
@@ -66,13 +66,26 @@ function changeColorPiece() {
        playerPieces[i].style.border= "1px solid rgb(255, 192, 203)";
     }
 }
-//Switch players turn
-// function switchPlayer(){
-//   if (turn) {
-//     turn = false;
-//     for (let i = 0; i < ; i++) {
+//Switch players 
+// TO DO - set the style to green after to test the game ---------------------------------------
+function switchPlayer(){
+  if (turn) {
+    turn = false;
+    for (let i = 0; i < redTurnText.length ; i++) {
+        redTurnText[i].style.color = "lightGrey";
+        blackTurnText[i].style.color = "black"
+    }
+   }else {
+      turn = true;
+      for (let i = 0; i < blackTurnText.length; i++) {
+          blackTurnText[i].style.color = "lightGrey"
+          redTurnText[i].style.color = "black"
+      }
+   }
+   piecesEvent();
+}
+piecesEvent();
 
-// }
 // parseInt from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt its gona make us return an integer (numbers)
 //event.target from https://stackoverflow.com/questions/57489670/type-of-event-target-value-should-be-changed-to-integer-in-react
 function selectedPiece(){
