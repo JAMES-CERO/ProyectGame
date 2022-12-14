@@ -51,6 +51,7 @@ const divider = document.querySelector("#divider")
         playerPieces = blackPieces;// line 15
     }
     removeOnClick();
+    changeColorPiece();
   }
 // function that removes Onclick on pieces, src https://forum.boardgamearena.com/viewtopic.php?t=17885&start=10
 // Element.removeAttribute() from https://developer.mozilla.org/en-US/docs/Web/API/Element/removeAttribute
@@ -59,3 +60,28 @@ const divider = document.querySelector("#divider")
         tableCells[i].removeAttribute("onclick");
     }
   }
+//TO DO: a function that change the color of the piece that is choose & after thatr turn the piece  back to a normal piece 
+function changeColorPiece() {
+    for (let i = 0; i < playerPieces.length; i++) {
+       playerPieces[i].style.border= "1px solid rgb(255, 192, 203)";
+    }
+}
+//Switch players turn
+// function switchPlayer(){
+//   if (turn) {
+//     turn = false;
+//     for (let i = 0; i < ; i++) {
+
+// }
+// parseInt from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt its gona make us return an integer (numbers)
+//event.target from https://stackoverflow.com/questions/57489670/type-of-event-target-value-should-be-changed-to-integer-in-react
+function selectedPiece(){
+    selectedPiece.pieceId = parseInt(event.target.id);
+    selectedPiece.indexPiece = findpiece(selectedPiece.pieceId);
+}
+//array.prototype.indexof https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+//return the first index
+function findpiece(pieceId){
+    let parse = parseInt(pieceId);
+    return board.indexOf(parse)
+}
