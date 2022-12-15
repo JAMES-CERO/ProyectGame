@@ -18,8 +18,8 @@ const blackTurnText = document.querySelectorAll(".blackTurn");
 const divider = document.querySelector("#divider")
 
 //TO DO: FUNCTION THAT VALIDATED LEGAL MOVES - 
-  //REMOVE PIECE THAT IS ELIMINATED
-  //MOVEMENT OF THE PIECES  -done
+  //TO DO : REMOVE PIECE THAT IS ELIMINATED
+  // TO DO : MOVEMENT OF  PIECES 
 
 
   let redPieceScore = 12;
@@ -60,7 +60,7 @@ const divider = document.querySelector("#divider")
         tableCells[i].removeAttribute("onclick");
     }
   }
-//TO DO: a function that change the color of the piece that is choose & after thatr turn the piece  back to a normal piece 
+// we change the color of the piece that is choose & after thatr turn the piece  back to a normal piece 
 function changeColorPiece() {
     for (let i = 0; i < playerPieces.length; i++) {
        playerPieces[i].style.border= "1px solid rgb(255, 192, 203)";
@@ -88,13 +88,26 @@ piecesEvent();
 
 // parseInt from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt its gona make us return an integer (numbers)
 //event.target from https://stackoverflow.com/questions/57489670/type-of-event-target-value-should-be-changed-to-integer-in-react
+
+// this function gets the id piece & the cell of the index board ; the event.target return a string , we need to make it a number 
 function selectedPiece(){
     selectedPiece.pieceId = parseInt(event.target.id);
     selectedPiece.indexPiece = findpiece(selectedPiece.pieceId);
+
 }
 //array.prototype.indexof https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
+// This funtion find where the piece is located on the board 
+
 //return the first index
 function findpiece(pieceId){
     let parse = parseInt(pieceId);
     return board.indexOf(parse)
+};
+//TO DO : A function that check if a piece is a king  
+function ifPieceIsKing(){
+    if(){
+      selectedPiece.isKing = tru;
+    }else{
+      selectedPiece.isKing = false;
+    }
 }
