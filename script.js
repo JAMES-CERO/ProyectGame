@@ -58,7 +58,7 @@ const blackTurnText = document.querySelectorAll(".blackTurn");
  
 // Every time that the page loads is gonna show the message StartGame 
 function startgame(){
-    alert("StartGame")
+    alert("Hey, welcome to checkers!. This game is my new Model Project, i hope you can enjoy this classic. Note: You can review the whole experience & how the game is building in my GitHub Account -- https://github.com/JAMES-CERO -- ")
 }
 startgame()
 

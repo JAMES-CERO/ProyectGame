@@ -1,11 +1,17 @@
 /*Each cell looks like an square & we wanted to center the piece
 */
-
+:root{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(194, 171, 223);
+}
 td{
     background-color:rgb(176, 113, 24);
     width: 80px;
     height: 80px;
     text-align: center;
+    
 }
 
 .noPieceHere{
@@ -32,11 +38,11 @@ td{
 
 /* A normal piece become King when reaching the last line on the opposite side of the board,  */
 .king.red-piece{
-    background-color: green;
+    background-color: darkorange;
 }
 
 .king.black-piece{
-    background-color: lightseagreen;
+    background-color: purple;
 }
 /* Flexbox 
   https://css-tricks.com/snippets/css/a-guide-to-flexbox/
@@ -51,7 +57,7 @@ td{
     color: orange;
     width: 338px;
     align-self: center;
-    
+    justify-content: center;
 }
 
 nav{
@@ -65,4 +71,7 @@ nav{
 p,
 span{
     display: inline-block;
+}
+h1{
+    color: black;
 }
