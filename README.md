@@ -1,4 +1,10 @@
+IMPORTANT!! : this game taugh me the real world of how to re-search &  debugging. not gonna lie, this was hard, exiting & a headache. however i have to admit it was a long journey that i got a lot of help with.. *cof *cof .. stackOverflow... W3 school, freecodecamp, etc. 
+  
+
+
 Checkers Game!
+
+![Checkers logo](https://cdn.zone.msn.com/images/v9/en-us/game/chmg/GameLogoLarge_640x345.jpg)
 
 Clssic 8x8 chessboard, where only the darks spots are used.
 it used 24 disc; 12 reds & 12 blacks.  (The color of the disc may change)  
@@ -42,3 +48,6 @@ Rules:
   If during 20 moves (10 by each player), only kings have changed position and there appear to be repeating movements, then a referee will step in to determine the winner according to who holds the strongest position.
 
   It is prohibited to annoy or distract your opponent. This includes making signs or sounds, pointing or hovering over the board with your hands or other body parts, needlessly delaying your moves, blowing smoke in your opponent's face, or appearing at the table dressed in a provocative manner.
+
+
+  
